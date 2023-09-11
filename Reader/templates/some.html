@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="static/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eazepark - Park with Ease</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            background-image: url('file:///C:/EazePark/bgim.png');
+            background-size: cover;
+            background-position: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        header {
+            background-color: transparent;
+            color: #fff;
+            text-align: left;
+            padding: 20px;
+            position: absolute;
+            top: 45%;
+            left: 5%;
+            transform: translateY(-50%);
+            animation: fadeInLeft 1s forwards;
+            margin-right: 30px; /* Added margin-right */
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .image-container {
+            max-width: 10%;
+            position: absolute;
+            right: calc(5% + 650px); /* Adjusted right position */
+            top: 40%; /* Centered vertically */
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 20px;
+            animation: fadeInRight 1s;
+            animation-fill-mode: forwards; /* Added animation-fill-mode */
+        }
+
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(20px) translateY(0); /* Adjusted initial position */
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) translateY(0);
+            }
+        }
+
+        .image-container img {
+            max-width: 100%; /* Adjusted image size */
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Eazepark</h1>
+        <p>Park with Ease</p>
+    </header>
+
+    <div class="image-container">
+        <img src="file:///C:/EazePark/crprkk.jpg" alt="Eazepark">
+    </div>
+</body>
+
+</html>

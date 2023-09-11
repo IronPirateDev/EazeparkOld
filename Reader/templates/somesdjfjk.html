@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="static/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eazepark - Park with Ease</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            background-image: url('file:///F:/EazePark/bgim.png'); /* Add your background image here */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative; /* Added relative positioning */
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.5); /* Added a semi-transparent background */
+            color: #fff;
+            text-align: left;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: fadeInLeft 1s;
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em; /* Increased the font size of the heading */
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .image-container {
+            position: absolute;
+            right: 0; /* Moved the image to the extreme right */
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .image-container img {
+            max-width: 50%; /* Decreased the size of the image */
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Eazepark</h1>
+        <p>Park with Ease</p>
+    </header>
+
+    <div class="image-container">
+        <img src="file:///F:/EazePark/crprk.png" alt="Eazepark">
+    </div>
+</body>
+
+</html>

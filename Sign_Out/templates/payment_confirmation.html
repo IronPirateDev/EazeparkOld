@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Confirmation</title>
+    <link rel="icon" href="static/favicon.ico">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content {
+            max-width: 80%;
+        }
+        img {
+            max-width: 20%;
+            height: auto;
+            margin-top: 20px;
+        }
+        button#confirmBtn {
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Car Number and Charges</h1>
+            <p>Car Number: KA 04 MG 2455</p>
+            <p>Total Charges: 1030 Rs</p>
+            <img src="Eazepark.png" alt="Car Image">
+        </div>
+        <button id="confirmBtn">Yes, Payment Made</button>
+    </div>
+    <script>
+        document.getElementById("confirmBtn").addEventListener("click", function() {
+            // Close the HTML file after confirmation
+            window.close();
+            // Set the 'money' variable to True
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/payment_status?money=True", true);
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
